@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planets/planets/ui/home/DetailPage.dart';
 import 'package:planets/planets/ui/home/Planet.dart';
 
 class PlanetRow extends StatelessWidget {
@@ -9,10 +10,13 @@ class PlanetRow extends StatelessWidget {
   Container get planetThumbnail => Container(
         margin: new EdgeInsets.symmetric(vertical: 16.0),
         alignment: FractionalOffset.centerLeft,
-        child: new Image(
-          image: new AssetImage(planet.image),
-          height: 92.0,
-          width: 92.0,
+        child: Hero(
+          tag: "planet-hero-${planet.id}",
+          child: new Image(
+            image: new AssetImage(planet.image),
+            height: 92.0,
+            width: 92.0,
+          ),
         ),
       );
 
@@ -52,7 +56,8 @@ class PlanetRow extends StatelessWidget {
             new Row(
               children: <Widget>[
                 new Expanded(
-                    child: _planetValue(planet.distance, "imgs/ic_distance.png")),
+                    child:
+                        _planetValue(planet.distance, "imgs/ic_distance.png")),
                 new Expanded(
                     child: _planetValue(planet.gravity, "imgs/ic_gravity.png")),
               ],
@@ -80,16 +85,20 @@ class PlanetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 16.0,
-        horizontal: 24.0,
-      ),
-      child: new Stack(
-        children: <Widget>[
-          planetCard,
-          planetThumbnail,
-        ],
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(PageRouteBuilder(
+          pageBuilder: (_, __, ___) => new DetailPage(planet))),
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: 16.0,
+          horizontal: 24.0,
+        ),
+        child: new Stack(
+          children: <Widget>[
+            planetCard,
+            planetThumbnail,
+          ],
+        ),
       ),
     );
   }
