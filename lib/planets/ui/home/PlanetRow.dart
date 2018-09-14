@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planets/planets/ui/home/DetailPage.dart';
-import 'package:planets/planets/ui/home/Planet.dart';
+import 'package:planets/planets/ui/detail/DetailPage.dart';
+import 'package:planets/planets/model/Planet.dart';
 
 class PlanetRow extends StatelessWidget {
   final Planet planet;
@@ -57,9 +57,9 @@ class PlanetRow extends StatelessWidget {
               children: <Widget>[
                 new Expanded(
                     child:
-                        _planetValue(planet.distance, "imgs/ic_distance.png")),
+                        _planetValue(planet.distance, "assets/imgs/ic_distance.png")),
                 new Expanded(
-                    child: _planetValue(planet.gravity, "imgs/ic_gravity.png")),
+                    child: _planetValue(planet.gravity, "assets/imgs/ic_gravity.png")),
               ],
             ),
           ],

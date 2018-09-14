@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planets/planets/ui/home/DetailPage.dart';
+import 'package:planets/planets/ui/detail/DetailPage.dart';
 import 'package:planets/planets/ui/home/HomePage.dart';
 
 void main() => runApp(new MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planets/planets/ui/home/Planet.dart';
+import 'package:planets/planets/model/Planet.dart';
 
 class DetailPage extends StatelessWidget {
   final Planet planet;

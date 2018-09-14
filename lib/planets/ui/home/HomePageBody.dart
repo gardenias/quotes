@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planets/planets/ui/home/Planet.dart';
+import 'package:planets/planets/model/Planet.dart';
 import 'package:planets/planets/ui/home/PlanetRow.dart';
 
 class HomePageBody extends StatelessWidget {
@@ -11,7 +11,7 @@ class HomePageBody extends StatelessWidget {
       "227.9m Km",
       "3.711 m/s ",
       "Lorem ipsum...",
-      "imgs/mars.png",
+      "assets/imgs/mars.png",
     ),
     const Planet(
       "2",
@@ -20,7 +20,7 @@ class HomePageBody extends StatelessWidget {
       "54.6m Km",
       "11.15 m/s ",
       "Lorem ipsum...",
-      "imgs/neptune.png",
+      "assets/imgs/neptune.png",
     ),
     const Planet(
       "3",
@@ -29,7 +29,7 @@ class HomePageBody extends StatelessWidget {
       "54.6m Km",
       "1.622 m/s ",
       "Lorem ipsum...",
-      "imgs/moon.png",
+      "assets/imgs/moon.png",
     ),
     const Planet(
       "4",
@@ -38,7 +38,7 @@ class HomePageBody extends StatelessWidget {
       "54.6m Km",
       "9.807 m/s ",
       "Lorem ipsum...",
-      "imgs/earth.png",
+      "assets/imgs/earth.png",
     ),
     const Planet(
       "5",
@@ -47,7 +47,7 @@ class HomePageBody extends StatelessWidget {
       "54.6m Km",
       "3.7 m/s ",
       "Lorem ipsum...",
-      "imgs/mercury.png",
+      "assets/imgs/mercury.png",
     ),
   ];
 
